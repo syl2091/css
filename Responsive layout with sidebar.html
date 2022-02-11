@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: 1fr minmax(150px, 20%);
+      height: 100px;
+    }
+
+    main,
+    aside {
+      padding: 12px;
+      text-align: center;
+    }
+
+    main {
+      background: #d4f2c4;
+    }
+
+    aside {
+      background: #81cfd9;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <main>This element is 1fr large.</main>
+      <aside>Min: 150px / Max: 20%</aside>
+    </div>
+  </body>
+</html>

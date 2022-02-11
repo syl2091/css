@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      box-sizing: border-box;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    .box {
+      display: inline-block;
+      width: 120px;
+      height: 120px;
+      padding: 8px;
+      margin: 8px;
+      background: #f24333;
+      color: white;
+      border: 1px solid #ba1b1d;
+      border-radius: 4px;
+    }
+
+    .content-box {
+      box-sizing: content-box;
+    }
+  </style>
+  <body>
+    <div class="box">border-box</div>
+    <div class="box content-box">content-box</div>
+  </body>
+</html>
