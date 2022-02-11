@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .typewriter-effect {
+      display: flex;
+      justify-content: center;
+      font-family: monospace;
+    }
+
+    .typewriter-effect > .text {
+      max-width: 0;
+      animation: typing 3s steps(var(--characters)) infinite;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .typewriter-effect:after {
+      content: ' |';
+      animation: blink 1s infinite;
+      animation-timing-function: step-end;
+    }
+
+    @keyframes typing {
+      75%,
+      100% {
+        max-width: calc(var(--characters) * 1ch);
+      }
+    }
+
+    @keyframes blink {
+      0%,
+      75%,
+      100% {
+        opacity: 1;
+      }
+      25% {
+        opacity: 0;
+      }
+    }
+  </style>
+  <body>
+    <div class="typewriter-effect">
+      <div class="text" id="typewriter-text"></div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    const typeWriter = document.getElementById('typewriter-text')
+    const text = 'Lorem ipsum dolor sit amet.'
+    typeWriter.innerHTML = text
+    typeWriter.style.setProperty('--characters', text.length)
+  </script>
+</html>
